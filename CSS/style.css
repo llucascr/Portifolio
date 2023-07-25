@@ -12,17 +12,32 @@ header {
 
 header h1 {
     margin: 0;
+    padding: 20px;
 }
 
 nav ul {
+    position: fixed;
+    top: 40px;
+    right: 2rem;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
+nav ul li {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
 nav ul li a {
+    font-size: 1.1rem;
+    font-weight: bold;
     color: #fff;
     text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: rgb(187, 12, 12);
 }
 
 main {
@@ -36,3 +51,96 @@ h2 {
 section {
     margin-bottom: 2rem;
 }
+
+/* Estilizando o CONTATO */
+.container {
+    max-width: 400px;
+    margin: 0;
+    padding: 30px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h3 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #664caf;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4c29ac;
+}
+
+button:active {
+    background-color: #a78fe9;
+}
+
+/* Estilizando o SOBRE */
+
+
+/* Estilizando o rodapé (footer) */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem ;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-container p {
+    margin: 0;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-links li {
+    display: inline-block;
+    margin-right: 1.2rem;
+}
+
+.social-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
