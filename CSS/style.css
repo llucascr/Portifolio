@@ -1,146 +1,169 @@
-body {
+* {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    border: 0;
+    box-sizing: border-box;
+
+    
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
+body {
+    background-color: #fafafa;
+    transition: background 0.2s linear;
 }
 
-header h1 {
-    margin: 0;
-    padding: 20px;
-}
-
-nav ul {
-    position: fixed;
-    top: 40px;
-    right: 2rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline-block;
-    margin-right: 1rem;
-}
-
-nav ul li a {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    color: rgb(187, 12, 12);
-}
-
-main {
-    padding: 2rem;
-}
-
-h2 {
-    border-bottom: 1px solid #333;
-}
-
-section {
-    margin-bottom: 2rem;
-}
-
-/* Estilizando o CONTATO */
-.container {
-    max-width: 400px;
-    margin: 0;
-    padding: 30px;
-    padding-top: 4px;
-    padding-bottom: 4px;
+.centered-object {
+    /* Definir as dimensões do objeto centralizado */
+    width: 300px;
+    height: 200px;
     background-color: #fff;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-h3 {
     text-align: center;
 }
 
-.form-group {
+/* CSS do dark mod */
+ .div-chk {
+    max-width: 600px;
+    padding: 40px;
+    
+ }
+
+body.dark {
+    background: #222c35;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label {
+    background-color: #111;
+    border-radius: 50px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+
+    transform: scale(1);
+}
+
+.label .ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+
+    height: 22px;
+    width: 22px;
+    
+    transform: translateX(0px);
+    transition: transform 0.2 linear;
+}
+
+.checkbox:checked + .label .ball {
+    transform: translateX(24px);
+}
+
+.fa-moon {
+    color: rgba(23, 20, 212, 0.877);
+}
+
+.fa-sun {
+    color: #f1a222;
+}
+
+
+/* CSS do header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    margin-bottom: 500px;
+}
+
+nav h1 {
+    color: rgb(0, 119, 255);
+}
+
+.title h1,
+.title h2 {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    font-size: 2.2rem;
+}
+
+.title p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
     margin-bottom: 20px;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-input[type="text"],
-input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #664caf;
+/* CSS do Boutton */
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    width: 130px;
+    height: 40px;
+    font-size: 1.1em;
+    cursor: pointer;
+    background-color: rgb(0, 119, 255);
     color: #fff;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
+    transition: all .4s;
+   }
 
-button:hover {
-    background-color: #4c29ac;
-}
-
-button:active {
-    background-color: #a78fe9;
-}
-
-/* Estilizando o SOBRE */
-
-
-/* Estilizando o rodapé (footer) */
-
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem ;
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-container p {
-    margin: 0;
-}
-
-.social-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.social-links li {
-    display: inline-block;
-    margin-right: 1.2rem;
-}
-
-.social-links li a {
-    color: #fff;
+.btn a {
     text-decoration: none;
-    font-size: 1.5rem;
+    color: white;
+}
+   
+   .btn:hover {
+    border-radius: 5px;
+    transform: translateY(-10px);
+    box-shadow: 0 7px 0 -2px #f85959,
+     0 15px 0 -4px #39a2db,
+     0 16px 10px -3px #39a2db;
+   }
+   
+   .btn:active {
+    transition: all 0.2s;
+    transform: translateY(-5px);
+    box-shadow: 0 2px 0 -2px #f85959,
+     0 8px 0 -4px #39a2db,
+     0 12px 10px -3px #39a2db;
+   }
+
+/* CSS SORBE MIM */
+.banner {
+    background-color: #39a2db;
+    margin: 20px;
+    padding: 10px;
+    padding-left: 10px;
+    margin-left: 70rem;
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
 }
 
+.banner h2 {
+    font-size: 1.1rem;
+    font-weight: 200;
+}
